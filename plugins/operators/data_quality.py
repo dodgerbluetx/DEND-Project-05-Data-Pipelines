@@ -40,4 +40,4 @@ class DataQualityOperator(BaseOperator):
             num_records = records[0][0]
             if num_records < 1:
                 raise ValueError(f"Data quality check failed! {table} table contained 0 rows!")
-            logging.info(f"Data quality check on {table} table passed with {records[0][0]} records!")
+            self.log.info(f"Data quality check on {table} table passed with {records[0][0]} records!")
